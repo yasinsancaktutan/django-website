@@ -1,0 +1,9 @@
+To create a project with django
+
+django-admin startproject websitename
+
+
+To start a django server, go to the project folder and type
+
+python manage.py runserver
+
