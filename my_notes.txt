@@ -7,3 +7,7 @@ To start a django server, go to the project folder and type
 
 python manage.py runserver
 
+
+How to add this repo to github?
+
+https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
