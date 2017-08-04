@@ -23,3 +23,61 @@ models.py >> A blueprint for your database. We can create classes in this file.
 tests.py >> We can add tests here to avoid bugs.
 views.py >> Functions are in this file. They take parameters from users and returns something.
 
+Yeni bir app eklediğimizde bunu migrate etmemiz gerekiyor:
+
+python manage.py migrate
+
+models'a eklediğimiz değişiklikleri database'e migrate edecek kodu oluşturmak için:
+
+python manage.py makemigrations music
+
+Migrate esnasında çalışacak SQL kodunu görmek için:
+
+python manage.py sqlmigrate music 0001 (0001 aslında migrate id'miz)
+
+Son olarak, migrate işlemini tamamlamak için :
+
+python manage.py migrate
+
+Now, the database is synced with our code.
+
+How does Django Work?
+
+When you first go to a web address, it goes to 'settings.py' file in 'website' folder
+Then it will go to the folder name of first app. It will go into 'models.py' file to check your db structure (classes).
+
+To apply changes to your model.
+
+1) Make the change in models.py
+2) run makemigrations
+3) run migrate
+
+Modelde oluşturduğumuz tablolara nasıl kayıt atarız?
+
+python manage.py shell
+
+from music.models import Album, Song
+
+a = Album(artist="Taylor Swift", album_title="Red", genre ="Country", album_logo = "https://images.genius.com/150f70936159bbdb170b5beece7b89ad.1000x1000x1.jpg")
+
+a.save() 
+
+Görüntülemek için:
+
+a.artist
+a.album_title
+
+Bunun yerine tek tek de atama yapabiliriz:
+
+b = Album()
+
+b.artist = "Michael Jackson"
+b.album_title = "Thriller"
+
+How to filter?
+
+Album.objects.filter(id = 3)
+
+Album.objects.filter(artist__startswith='Taylor')
+
+
