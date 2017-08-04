@@ -1,25 +1,22 @@
-To create a project with django
+To create a project with django:
 
 django-admin startproject websitename
 
-
-To start a django server, go to the project folder and type
+To start a django server, go to the project folder and type:
 
 python manage.py runserver
-
 
 How to add this repo to github?
 
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
-
-How to create an app? in this case its name is music.
+How to create an app? in this case its name is music:
 
 python manage.py startapp music
 
-What are these files in my app folder?
+What are these files in my app folder?:
 
-iniy.py >> nothing important
+init.py >> nothing important
 admin.py >> admin panel
 apps.py >> Settings for that specific app.
 models.py >> A blueprint for your database. We can create classes in this file.
